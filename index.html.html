@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>RealityX</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #5F0000, #ff0000);
+    color: black;
+    text-align: center;
+}
+
+/* HEADER NORMAL */
+header {
+    background: linear-gradient(to left, #000000, #ff0000);
+    padding: 40px;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    transition: all 0.3s ease;
+}
+
+/* HEADER QUAND TU SCROLL */
+header.small {
+    padding: 10px;
+    font-size: 20px;
+    background: linear-gradient(to left, #000000, #ff0000);
+}
+
+/* CONTENU */
+section {
+    padding: 80px 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.button {
+    background: linear-gradient(to right, red, gold);
+    padding: 15px 30px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* AJOUT POUR FAIRE DESCENDRE LE SITE */
+.big-space {
+    height: 500px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🔥 RealityX 🔥</h1>
+    <p>Rejoins l'aventure maintenant !</p>
+</header>
+
+<section>
+    <h2>📜 Présentation</h2>
+    <p>RealityX est un serveur Minecraft où l'on peut survivre, créer et build.</p>
+</section>
+
+<section>
+    <h2>⚔️ Gameplay</h2>
+    <ul>
+        <li>Survie</li>
+        <li>Économie</li>
+        <li>Mini-jeux</li>
+    </ul>
+</section>
+
+<section>
+    <h2>🚀 Venez nombreux</h2>
+    <div class="button" onclick="copyIP()">📡 play.realityx.fr</div>
+</section>
+
+<!-- NOUVELLES SECTIONS POUR SCROLL -->
+<section>
+    <h2>🏆 Events</h2>
+    <p>Des events réguliers avec récompenses incroyables !</p>
+</section>
+
+<section>
+    <h2>🛒 Boutique</h2>
+    <p>Achetez des items exclusifs et soutenez le serveur.</p>
+</section>
+
+<section>
+    <h2>👥 Communauté</h2>
+    <p>Rejoins une communauté active et fun !</p>
+</section>
+
+<!-- ESPACE EN PLUS -->
+<div class="big-space"></div>
+
+<script>
+function copyIP() {
+    navigator.clipboard.writeText("play.realityx.fr");
+    alert("IP copiée !");
+}
+
+/* EFFET SCROLL */
+window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("small");
+    } else {
+        header.classList.remove("small");
+    }
+});
+</script>
+
+</body>
+</html>
